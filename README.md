@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- Banner Futuristis (Tech Abstract) -->
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lTjJp9N7k56XPG/giphy.gif" width="100%" />
+<!-- Banner Futuristis (Abstract Tech) -->
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/xT9IgzoKnwzQx9wGMo/giphy.gif" width="100%" />
 
 <br>
 
@@ -9,14 +9,14 @@
 
 <br>
 
-<!-- Typing Animation dengan warna-warni -->
+<!-- Typing Animation -->
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=30&duration=2000&pause=500&color=00D1FF&width=700&lines=HELLO+I+AM+ALDO+RIZALDI!;I+LOVE+CREATING+THINGS!;LET'S+COLLABORATE+AND+BUILD+AWESOME+STUFF!" alt="Typing SVG" />
 </p>
 
 <br>
 
-<!-- Statistik visual -->
+<!-- Statistik Visual -->
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=arlreal&show_icons=true&theme=radical&include_all_commits=true&count_private=true" alt="Aldo Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arlreal&layout=compact&theme=radical" alt="Top Languages" />
@@ -42,12 +42,12 @@
 
 <h3>👀 VISITOR COUNT</h3>
 <p align="center">
-  <img src="https://count.getloli.com/get/@arlreal?theme=gelbooru" />
+  <img src="https://count.getloli.com/get/@arlreal?theme=terminal" />
 </p>
 
 <br>
 
-<!-- GIF Penutup Abstract -->
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/xT9IgzoKnwzQx9wGMo/giphy.gif" width="50%" />
+<!-- Footer Abstract -->
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lTjJp9N7k56XPG/giphy.gif" width="50%" />
 
 </div>
