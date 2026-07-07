@@ -47,7 +47,7 @@
 
 <br>
 
-<!-- Footer Abstract -->
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lTjJp9N7k56XPG/giphy.gif" width="50%" />
+<!-- Footer: Bendera Indonesia Beribkar (Gaya Modern Pixel Art) -->
+<img src="https://i.pinimg.com/originals/9d/e8/25/9de825b3c3f410ed390361f5195b9e4a.gif" width="30%" alt="Bendera Indonesia" />
 
 </div>
