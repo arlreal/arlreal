@@ -1,42 +1,56 @@
 <div align="center">
 
-### wellcome
-<!-- Tambahkan spasi vertikal agar banner tidak terlalu rapat dengan header -->
-<br>
-
-<!-- Ini adalah Banner Estetik Minimalis Dark. Kamu bisa ganti link di bawah jika punya GIF lain yang lebih kamu suka -->
-<img src="https://i.pinimg.com/originals/5f/79/94/5f7994731044548469b1f6f102f5f21d.gif" width="100%" alt="Futuristic Dark Banner" />
+<!-- Banner GIF yang sangat ramai dan cerah -->
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/3o7TKMGpxxHOGTdzJC/giphy.gif" width="100%" />
 
 <br>
+
+# ⚡ WELCOME TO MY DYNAMIC WORLD ⚡
+
 <br>
 
-<!-- Animasi Teks Berjalan Modern -->
+<!-- Typing Animation dengan warna-warni -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&pause=1000&color=00D1FF&width=500&lines=Halo+saya+Aldo!;Developer+%7C+Gamer+%7C+Creator;Mari+berkarya!+" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=30&duration=2000&pause=500&color=F7FF00&width=700&lines=HELLO+I+AM+ALDO+RIZALDI!;I+AM+A+DEVELOPER+AND+GAMER!;LET'S+COLLABORATE+AND+BUILD+AWESOME+STUFF!" alt="Typing SVG" />
 </p>
 
 <br>
-<br>
-<hr>
-<br>
 
-<!-- Bagian Connect With Me yang Rapi -->
-### 🌐 Connect with me:
-
+<!-- Statistik visual yang sangat ramai -->
 <p align="center">
-  <a href="https://instagram.com/arlreal_"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
-  <a href="https://www.youtube.com/c/arlreal"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
-  <a href="https://discord.gg/Aldo"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/></a>
+  <img src="https://github-readme-stats.vercel.app/api?username=arlreal&show_icons=true&theme=radical&include_all_commits=true&count_private=true" alt="Aldo Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arlreal&layout=compact&theme=radical" alt="Top Languages" />
 </p>
 
 <br>
+
+<!-- Badge Sosial Media dengan animasi warna -->
+<h3>🌐 FOLLOW ME HERE</h3>
+<p align="center">
+  <a href="https://instagram.com/arlreal_"><img src="https://img.shields.io/badge/INSTAGRAM-000000?style=for-the-badge&logo=instagram&logoColor=E4405F"/></a>
+  <a href="https://www.youtube.com/c/arlreal"><img src="https://img.shields.io/badge/YOUTUBE-000000?style=for-the-badge&logo=youtube&logoColor=FF0000"/></a>
+  <a href="https://discord.gg/Aldo"><img src="https://img.shields.io/badge/DISCORD-000000?style=for-the-badge&logo=discord&logoColor=5865F2"/></a>
+</p>
+
 <br>
 
-<!-- Bagian Tech Stack yang Simpel -->
-### 🛠 Tech Stack:
-
+<!-- Tampilan Tech Stack yang lebih besar dan mencolok -->
+<h3>🛠 MY TECH STACK</h3>
 <p align="center">
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white"/>
+  <img src="https://skillicons.dev/icons?i=firebase,git,vscode,github" />
 </p>
+
+<br>
+
+<!-- Tambahan elemen visual: Visitor Counter -->
+<h3>👀 VISITOR COUNT</h3>
+<p align="center">
+  <img src="https://count.getloli.com/get/@arlreal?theme=gelbooru" />
+</p>
+
+<br>
+
+<!-- GIF Penutup yang sangat ramai -->
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lTjJp9N7k56XPG/giphy.gif" width="50%" />
 
 </div>
