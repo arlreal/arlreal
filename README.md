@@ -1,6 +1,6 @@
 <div align="center">
 
-### 🌌 Selamat datang di dunia saya! 🌌
+### wellcome
 <!-- Tambahkan spasi vertikal agar banner tidak terlalu rapat dengan header -->
 <br>
 
