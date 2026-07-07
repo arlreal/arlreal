@@ -47,7 +47,7 @@
 
 ### 🛠️ Tech Stack
 
-<img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,html,css,tailwind,git,github,figma,vscode,blender&theme=dark" />
+<img src="https://skillicons.dev/icons?i=github,youtube,instagram,blender&theme=dark" />
 
 </div>
 
