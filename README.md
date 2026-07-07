@@ -12,7 +12,7 @@
 <tr>
 <td width="55%" valign="top">
 
-### About Me
+### 🧑‍🚀 About Me
 
 <br/>
 
@@ -33,7 +33,9 @@
 </td>
 <td width="45%" valign="top" align="center">
 
-<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="320" style="border-radius: 14px; border: 1px solid #00e5ff44;" />
+<div align="center" style="background:#000000; border-radius:14px; padding:20px; border:1px solid #00e5ff44;">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2500&pause=1000&color=00E5FF&background=00000000&center=true&vCenter=true&width=380&height=200&lines=%3E+whoami;Aldo;%3E+status;Online+%E2%9A%A1;%3E+socials;IG+%40arlreal_;YT+%40arlreal;%3E+_" alt="Terminal" />
+</div>
 
 </td>
 </tr>
