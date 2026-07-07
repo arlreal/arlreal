@@ -16,17 +16,13 @@
 
 ```yaml
 name: Aldo
-role: Software Developer
-location: Indonesia 🇮🇩
-focus: Building clean & modern digital experience
-currently_learning: New tech, new ideas, new possibilities
-fun_fact: "Code by night, dream in dark mode 🌙"
+instagram: "@arlreal_"
+youtube: "@arlreal"
 ```
 
-- 🔭 Lagi ngerjain project-project seru
-- 🌱 Terus belajar hal baru tiap hari
-- 💬 Bisa diajak diskusi soal coding & teknologi
-- ⚡ Suka hal-hal yang aesthetic & futuristic
+- 👋 Halo, nama saya **Aldo**
+- 📸 Instagram: **@arlreal_**
+- 🎬 YouTube: **@arlreal**
 - 📫 Yuk terhubung lewat sosial media di bawah!
 
 </td>
@@ -46,7 +42,7 @@ fun_fact: "Code by night, dream in dark mode 🌙"
 
 ### 🛠️ Tech Stack
 
-<img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,html,css,tailwind,git,github,figma,vscode&theme=dark" />
+<img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,html,css,tailwind,git,github,figma,vscode,blender&theme=dark" />
 
 </div>
 
