@@ -14,23 +14,26 @@
 
 ### 🧑‍🚀 About Me
 
-```yaml
-name: Aldo
-instagram: "@arlreal_"
-youtube: "@arlreal"
-```
+<br/>
 
-- 👋 Halo, nama saya **Aldo**
-- 📸 Instagram: **@arlreal_**
-- 🎬 YouTube: **@arlreal**
-- 📫 Yuk terhubung lewat sosial media di bawah!
+<p>
+<img src="https://img.shields.io/badge/Name-Aldo-0d1117?style=for-the-badge&labelColor=000000&color=00e5ff&logoColor=white"/>
+</p>
+<p>
+<a href="https://instagram.com/arlreal_" target="_blank"><img src="https://img.shields.io/badge/Instagram-@arlreal__-0d1117?style=for-the-badge&logo=instagram&labelColor=000000&color=00e5ff"/></a>
+</p>
+<p>
+<a href="https://www.youtube.com/@arlreal" target="_blank"><img src="https://img.shields.io/badge/YouTube-@arlreal-0d1117?style=for-the-badge&logo=youtube&labelColor=000000&color=00e5ff"/></a>
+</p>
+
+<br/>
+
+> 👋 Halo, kenalin nama saya **Aldo**. Yuk terhubung lewat sosial media aku di atas ✨
 
 </td>
 <td width="45%" valign="top" align="center">
 
-<img src="https://raw.githubusercontent.com/DenverCoder1/readme-typing-svg/main/assets/demo.gif" width="0" height="0"/>
-
-<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="320" style="border-radius: 14px; border: 1px solid #00e5ff44;" />
+<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="320" style="border-radius: 14px; border: 1px solid #00e5ff44;" />
 
 </td>
 </tr>
