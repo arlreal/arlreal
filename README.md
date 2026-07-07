@@ -10,113 +10,21 @@
 
 <div align="center">
 
-### ⚙️ My Setup
-
 <table>
 <tr>
 <td align="center" width="33%">
 
-<svg width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="topFace" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00e5ff"/>
-      <stop offset="100%" stop-color="#7000ff"/>
-    </linearGradient>
-    <linearGradient id="leftFace" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#005c7a"/>
-      <stop offset="100%" stop-color="#3a0066"/>
-    </linearGradient>
-    <linearGradient id="rightFace" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00a3cc"/>
-      <stop offset="100%" stop-color="#5200a3"/>
-    </linearGradient>
-  </defs>
-  <!-- Top face -->
-  <polygon points="100,20 170,58 100,96 30,58" fill="url(#topFace)" stroke="#00e5ff" stroke-width="1.5"/>
-  <!-- Left face -->
-  <polygon points="30,58 100,96 100,172 30,134" fill="url(#leftFace)" stroke="#00e5ff" stroke-width="1.5"/>
-  <!-- Right face -->
-  <polygon points="170,58 100,96 100,172 170,134" fill="url(#rightFace)" stroke="#00e5ff" stroke-width="1.5"/>
-  <!-- Grid lines top -->
-  <line x1="65" y1="39" x2="65" y2="115" stroke="#0a0a1a" stroke-width="1.5"/>
-  <line x1="135" y1="39" x2="135" y2="115" stroke="#0a0a1a" stroke-width="1.5"/>
-  <line x1="53" y1="46" x2="123" y2="84" stroke="#0a0a1a" stroke-width="1.5"/>
-  <line x1="77" y1="32" x2="147" y2="70" stroke="#0a0a1a" stroke-width="1.5"/>
-  <!-- Grid lines left -->
-  <line x1="53" y1="72" x2="123" y2="110" stroke="#0a0a1a" stroke-width="1.5"/>
-  <line x1="77" y1="86" x2="147" y2="124" stroke="#0a0a1a" stroke-width="1.5"/>
-  <line x1="65" y1="77" x2="65" y2="153" stroke="#0a0a1a" stroke-width="1.5"/>
-  <!-- Grid lines right -->
-  <line x1="135" y1="77" x2="135" y2="153" stroke="#0a0a1a" stroke-width="1.5"/>
-</svg>
-
-**Rubik's Cube**
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InRvcEZhY2UiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwZTVmZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3MDAwZmYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxlZnRGYWNlIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDVjN2EiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjM2EwMDY2Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJyaWdodEZhY2UiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTNjYyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1MjAwYTMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gVG9wIGZhY2UgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIxMDAsMjAgMTcwLDU4IDEwMCw5NiAzMCw1OCIgZmlsbD0idXJsKCN0b3BGYWNlKSIgc3Ryb2tlPSIjMDBlNWZmIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gTGVmdCBmYWNlIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iMzAsNTggMTAwLDk2IDEwMCwxNzIgMzAsMTM0IiBmaWxsPSJ1cmwoI2xlZnRGYWNlKSIgc3Ryb2tlPSIjMDBlNWZmIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gUmlnaHQgZmFjZSAtLT4KICA8cG9seWdvbiBwb2ludHM9IjE3MCw1OCAxMDAsOTYgMTAwLDE3MiAxNzAsMTM0IiBmaWxsPSJ1cmwoI3JpZ2h0RmFjZSkiIHN0cm9rZT0iIzAwZTVmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8IS0tIEdyaWQgbGluZXMgdG9wIC0tPgogIDxsaW5lIHgxPSI2NSIgeTE9IjM5IiB4Mj0iNjUiIHkyPSIxMTUiIHN0cm9rZT0iIzBhMGExYSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMTM1IiB5MT0iMzkiIHgyPSIxMzUiIHkyPSIxMTUiIHN0cm9rZT0iIzBhMGExYSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNTMiIHkxPSI0NiIgeDI9IjEyMyIgeTI9Ijg0IiBzdHJva2U9IiMwYTBhMWEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9Ijc3IiB5MT0iMzIiIHgyPSIxNDciIHkyPSI3MCIgc3Ryb2tlPSIjMGEwYTFhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gR3JpZCBsaW5lcyBsZWZ0IC0tPgogIDxsaW5lIHgxPSI1MyIgeTE9IjcyIiB4Mj0iMTIzIiB5Mj0iMTEwIiBzdHJva2U9IiMwYTBhMWEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9Ijc3IiB5MT0iODYiIHgyPSIxNDciIHkyPSIxMjQiIHN0cm9rZT0iIzBhMGExYSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNjUiIHkxPSI3NyIgeDI9IjY1IiB5Mj0iMTUzIiBzdHJva2U9IiMwYTBhMWEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPCEtLSBHcmlkIGxpbmVzIHJpZ2h0IC0tPgogIDxsaW5lIHgxPSIxMzUiIHkxPSI3NyIgeDI9IjEzNSIgeTI9IjE1MyIgc3Ryb2tlPSIjMGEwYTFhIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4=" width="150"/>
 
 </td>
 <td align="center" width="33%">
 
-<svg width="160" height="150" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="kbTop" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#16213e"/>
-    </linearGradient>
-    <linearGradient id="kbSide" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00e5ff"/>
-      <stop offset="100%" stop-color="#0a3d4d"/>
-    </linearGradient>
-  </defs>
-  <!-- keyboard body top -->
-  <polygon points="110,30 200,70 110,110 20,70" fill="url(#kbTop)" stroke="#00e5ff" stroke-width="1.5"/>
-  <!-- keyboard body front -->
-  <polygon points="20,70 110,110 110,130 20,90" fill="url(#kbSide)" stroke="#00e5ff" stroke-width="1.5"/>
-  <polygon points="110,110 200,70 200,90 110,130" fill="#004a5c" stroke="#00e5ff" stroke-width="1.5"/>
-  <!-- keys grid -->
-  <g fill="#00e5ff" opacity="0.85">
-    <rect x="60" y="52" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="78" y="60" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="96" y="68" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="80" y="48" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="98" y="56" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="116" y="64" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="100" y="44" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="118" y="52" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="136" y="60" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="120" y="40" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="138" y="48" width="10" height="7" transform="skewX(-20)"/>
-    <rect x="156" y="56" width="10" height="7" transform="skewX(-20)"/>
-  </g>
-</svg>
-
-**Mechanical Keyboard**
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIyMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImtiVG9wIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxYTFhMmUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTYyMTNlIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJrYlNpZGUiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwZTVmZiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTNkNGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0ga2V5Ym9hcmQgYm9keSB0b3AgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIxMTAsMzAgMjAwLDcwIDExMCwxMTAgMjAsNzAiIGZpbGw9InVybCgja2JUb3ApIiBzdHJva2U9IiMwMGU1ZmYiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPCEtLSBrZXlib2FyZCBib2R5IGZyb250IC0tPgogIDxwb2x5Z29uIHBvaW50cz0iMjAsNzAgMTEwLDExMCAxMTAsMTMwIDIwLDkwIiBmaWxsPSJ1cmwoI2tiU2lkZSkiIHN0cm9rZT0iIzAwZTVmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8cG9seWdvbiBwb2ludHM9IjExMCwxMTAgMjAwLDcwIDIwMCw5MCAxMTAsMTMwIiBmaWxsPSIjMDA0YTVjIiBzdHJva2U9IiMwMGU1ZmYiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPCEtLSBrZXlzIGdyaWQgLS0+CiAgPGcgZmlsbD0iIzAwZTVmZiIgb3BhY2l0eT0iMC44NSI+CiAgICA8cmVjdCB4PSI2MCIgeT0iNTIiIHdpZHRoPSIxMCIgaGVpZ2h0PSI3IiB0cmFuc2Zvcm09InNrZXdYKC0yMCkiLz4KICAgIDxyZWN0IHg9Ijc4IiB5PSI2MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iOTYiIHk9IjY4IiB3aWR0aD0iMTAiIGhlaWdodD0iNyIgdHJhbnNmb3JtPSJza2V3WCgtMjApIi8+CiAgICA8cmVjdCB4PSI4MCIgeT0iNDgiIHdpZHRoPSIxMCIgaGVpZ2h0PSI3IiB0cmFuc2Zvcm09InNrZXdYKC0yMCkiLz4KICAgIDxyZWN0IHg9Ijk4IiB5PSI1NiIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iMTE2IiB5PSI2NCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iMTAwIiB5PSI0NCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iMTE4IiB5PSI1MiIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iMTM2IiB5PSI2MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iMTIwIiB5PSI0MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iMTM4IiB5PSI0OCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogICAgPHJlY3QgeD0iMTU2IiB5PSI1NiIgd2lkdGg9IjEwIiBoZWlnaHQ9IjciIHRyYW5zZm9ybT0ic2tld1goLTIwKSIvPgogIDwvZz4KPC9zdmc+" width="150"/>
 
 </td>
 <td align="center" width="33%">
 
-<svg width="140" height="150" viewBox="0 0 180 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="mouseTop" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00e5ff"/>
-      <stop offset="100%" stop-color="#7000ff"/>
-    </linearGradient>
-    <linearGradient id="mouseBody" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#0a0a1a"/>
-    </linearGradient>
-  </defs>
-  <!-- mouse body -->
-  <path d="M 90 20 C 130 20 150 55 150 95 C 150 145 125 175 90 175 C 55 175 30 145 30 95 C 30 55 50 20 90 20 Z" fill="url(#mouseBody)" stroke="#00e5ff" stroke-width="2"/>
-  <!-- top highlight -->
-  <path d="M 90 20 C 130 20 150 55 150 95 L 90 95 Z" fill="url(#mouseTop)" opacity="0.3"/>
-  <!-- scroll wheel -->
-  <rect x="83" y="45" width="14" height="24" rx="7" fill="#00e5ff"/>
-  <!-- center line -->
-  <line x1="90" y1="80" x2="90" y2="175" stroke="#00e5ff" stroke-width="1.5" opacity="0.6"/>
-  <!-- glow dot -->
-  <circle cx="90" cy="150" r="5" fill="#00e5ff"/>
-</svg>
-
-**Gaming Mouse**
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE4MCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Im1vdXNlVG9wIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMGU1ZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzAwMGZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJtb3VzZUJvZHkiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFhMWEyZSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwYTBhMWEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gbW91c2UgYm9keSAtLT4KICA8cGF0aCBkPSJNIDkwIDIwIEMgMTMwIDIwIDE1MCA1NSAxNTAgOTUgQyAxNTAgMTQ1IDEyNSAxNzUgOTAgMTc1IEMgNTUgMTc1IDMwIDE0NSAzMCA5NSBDIDMwIDU1IDUwIDIwIDkwIDIwIFoiIGZpbGw9InVybCgjbW91c2VCb2R5KSIgc3Ryb2tlPSIjMDBlNWZmIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIHRvcCBoaWdobGlnaHQgLS0+CiAgPHBhdGggZD0iTSA5MCAyMCBDIDEzMCAyMCAxNTAgNTUgMTUwIDk1IEwgOTAgOTUgWiIgZmlsbD0idXJsKCNtb3VzZVRvcCkiIG9wYWNpdHk9IjAuMyIvPgogIDwhLS0gc2Nyb2xsIHdoZWVsIC0tPgogIDxyZWN0IHg9IjgzIiB5PSI0NSIgd2lkdGg9IjE0IiBoZWlnaHQ9IjI0IiByeD0iNyIgZmlsbD0iIzAwZTVmZiIvPgogIDwhLS0gY2VudGVyIGxpbmUgLS0+CiAgPGxpbmUgeDE9IjkwIiB5MT0iODAiIHgyPSI5MCIgeTI9IjE3NSIgc3Ryb2tlPSIjMDBlNWZmIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPCEtLSBnbG93IGRvdCAtLT4KICA8Y2lyY2xlIGN4PSI5MCIgY3k9IjE1MCIgcj0iNSIgZmlsbD0iIzAwZTVmZiIvPgo8L3N2Zz4=" width="150"/>
 
 </td>
 </tr>
