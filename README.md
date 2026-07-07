@@ -1,53 +1,85 @@
 <div align="center">
 
-<!-- Banner Futuristis (Abstract Tech) -->
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJqZzZqZzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4Zzc4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/xT9IgzoKnwzQx9wGMo/giphy.gif" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:0f2027,100:2c5364&height=220&section=header&text=Hi%20There,%20I'm%20Aldo&fontSize=42&fontColor=00e5ff&animation=fadeIn&fontAlignY=38&desc=Turning%20Ideas%20Into%20Code%20⚡&descAlignY=55&descSize=18" width="100%"/>
 
-<br>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=800&color=00E5FF&center=true&vCenter=true&width=600&lines=Welcome+to+my+profile+%F0%9F%91%8B;Software+Developer+%F0%9F%92%BB;Always+learning+something+new+%F0%9F%9A%80" alt="Typing SVG" />
 
-# ⚡ WELCOME TO MY SPACE ⚡
+</div>
 
-<br>
+<br/>
 
-<!-- Typing Animation -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=30&duration=2000&pause=500&color=00D1FF&width=700&lines=HELLO+I+AM+ALDO+RIZALDI!;I+LOVE+CREATING+THINGS!;LET'S+COLLABORATE+AND+BUILD+AWESOME+STUFF!" alt="Typing SVG" />
-</p>
+<table align="center">
+<tr>
+<td width="55%" valign="top">
 
-<br>
+### 🧑‍🚀 About Me
 
-<!-- Statistik Visual -->
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=arlreal&show_icons=true&theme=radical&include_all_commits=true&count_private=true" alt="Aldo Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arlreal&layout=compact&theme=radical" alt="Top Languages" />
-</p>
+```yaml
+name: Aldo
+role: Software Developer
+location: Indonesia 🇮🇩
+focus: Building clean & modern digital experience
+currently_learning: New tech, new ideas, new possibilities
+fun_fact: "Code by night, dream in dark mode 🌙"
+```
 
-<br>
+- 🔭 Lagi ngerjain project-project seru
+- 🌱 Terus belajar hal baru tiap hari
+- 💬 Bisa diajak diskusi soal coding & teknologi
+- ⚡ Suka hal-hal yang aesthetic & futuristic
+- 📫 Yuk terhubung lewat sosial media di bawah!
 
-<h3>🌐 FOLLOW ME HERE</h3>
-<p align="center">
-  <a href="https://instagram.com/arlreal_"><img src="https://img.shields.io/badge/INSTAGRAM-000000?style=for-the-badge&logo=instagram&logoColor=E4405F"/></a>
-  <a href="https://www.youtube.com/c/arlreal"><img src="https://img.shields.io/badge/YOUTUBE-000000?style=for-the-badge&logo=youtube&logoColor=FF0000"/></a>
-  <a href="https://discord.gg/Aldo"><img src="https://img.shields.io/badge/DISCORD-000000?style=for-the-badge&logo=discord&logoColor=5865F2"/></a>
-</p>
+</td>
+<td width="45%" valign="top" align="center">
 
-<br>
+<img src="https://raw.githubusercontent.com/DenverCoder1/readme-typing-svg/main/assets/demo.gif" width="0" height="0"/>
 
-<h3>🛠 TECH STACK</h3>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=firebase,git,vscode,github" />
-</p>
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="320" style="border-radius: 14px; border: 1px solid #00e5ff44;" />
 
-<br>
+</td>
+</tr>
+</table>
 
-<h3>👀 VISITOR COUNT</h3>
-<p align="center">
-  <img src="https://count.getloli.com/get/@arlreal?theme=terminal" />
-</p>
+<br/>
 
-<br>
+<div align="center">
 
-<!-- Footer: Bendera Indonesia Beribkar (Gaya Modern Pixel Art) -->
-<img src="https://i.pinimg.com/originals/9d/e8/25/9de825b3c3f410ed390361f5195b9e4a.gif" width="30%" alt="Bendera Indonesia" />
+### 🛠️ Tech Stack
 
+<img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,python,html,css,tailwind,git,github,figma,vscode&theme=dark" />
+
+</div>
+
+<br/>
+
+<div align="center">
+
+### 📊 GitHub Stats
+
+<img src="https://github-readme-stats.vercel.app/api?username=USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00e5ff&icon_color=00e5ff&text_color=c9d1d9" width="48%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=USERNAME&theme=tokyonight&hide_border=true&background=0d1117&ring=00e5ff&fire=00e5ff&currStreakLabel=00e5ff" width="48%" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=USERNAME&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00e5ff&text_color=c9d1d9" width="45%"/>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+### 🌐 Connect With Me
+
+<a href="https://www.youtube.com/@arlreal" target="_blank"><img src="https://img.shields.io/badge/YouTube-000000?style=for-the-badge&logo=youtube&logoColor=00e5ff"/></a>
+<a href="https://instagram.com/arlreal_" target="_blank"><img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=instagram&logoColor=00e5ff"/></a>
+<a href="https://linkedin.com/in/USERNAME" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=00e5ff"/></a>
+<a href="mailto:email@example.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=00e5ff"/></a>
+
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:0f2027,100:000000&height=120&section=footer"/>
+
+<div align="center">
+<sub>✨ Thanks for visiting my profile! ✨</sub>
 </div>
