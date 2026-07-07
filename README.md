@@ -34,7 +34,7 @@
 <td width="45%" valign="top" align="center">
 
 <div align="center" style="background:#000000; border-radius:14px; padding:20px; border:1px solid #00e5ff44;">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2500&pause=1000&color=00E5FF&background=00000000&center=true&vCenter=true&width=380&height=200&lines=%3E+whoami;Aldo;%3E+status;Online+%E2%9A%A1;%3E+socials;IG+%40arlreal_;YT+%40arlreal;%3E+_" alt="Terminal" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2500&pause=1000&color=00E5FF&center=true&vCenter=true&width=380&lines=whoami%3A+Aldo;status%3A+Online;IG%3A+arlreal_;YT%3A+arlreal" alt="Terminal" />
 </div>
 
 </td>
