@@ -1,5 +1,5 @@
 <h1 align="center">Halo Saya Aldo Rizaldi</h1>
-<h3 align="center">saya berasal dari indonesia</h3>
+<h3 align="center">my profile</h3>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
