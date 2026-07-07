@@ -12,7 +12,7 @@
 <tr>
 <td width="55%" valign="top">
 
-### 🧑‍🚀 About Me
+### About Me
 
 <br/>
 
