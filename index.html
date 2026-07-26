@@ -8,7 +8,7 @@
     <style>
         :root {
             --bg-main: #07090e;
-            --card-bg: rgba(14, 20, 32, 0.65);
+            --card-bg: rgba(14, 20, 32, 0.75);
             --card-border: rgba(255, 255, 255, 0.08);
             --card-border-hover: rgba(59, 130, 246, 0.5);
             --accent-blue: #3b82f6;
@@ -52,14 +52,14 @@
         .glow-orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(160px);
-            opacity: 0.35;
+            filter: blur(140px);
+            opacity: 0.3;
             will-change: transform;
             animation: floatOrb 25s infinite alternate ease-in-out;
         }
 
-        .orb-1 { top: -10%; left: 20%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 70%); }
-        .orb-2 { bottom: -20%; right: 10%; width: 55vw; height: 55vw; background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%); animation-delay: -8s; }
+        .orb-1 { top: -10%; left: 10%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 70%); }
+        .orb-2 { bottom: -10%; right: 10%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%); animation-delay: -8s; }
 
         @keyframes floatOrb {
             0% { transform: translate(0, 0) scale(1); }
@@ -67,18 +67,18 @@
             100% { transform: translate(-4vw, 4vh) scale(0.92); }
         }
 
-        /* --- FLOATING MODERN NAVBAR --- */
+        /* --- FLOATING MODERN NAVBAR (FIXED CENTER TOP) --- */
         header {
             width: 100%;
             position: fixed;
-            top: 24px;
+            top: 20px;
             left: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            padding: 0 24px;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 0 16px;
+            pointer-events: none; /* Supaya area kosong di samping header bisa diklik/scroll */
         }
 
         nav {
@@ -86,10 +86,18 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--card-border);
-            padding: 8px 14px;
+            padding: 6px 12px;
             border-radius: 99px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             transition: background 0.4s ease, border-color 0.4s ease;
+            pointer-events: auto; /* Mengaktifkan kembali interaksi klik pada navbar */
+            max-width: 100%;
+            overflow-x: auto;
+            scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+        }
+
+        nav::-webkit-scrollbar {
+            display: none; /* Sembunyikan scrollbar di Chrome/Safari */
         }
 
         header.scrolled nav {
@@ -97,14 +105,14 @@
             border-color: rgba(255, 255, 255, 0.12);
         }
 
-        nav ul { list-style: none; display: flex; gap: 6px; }
+        nav ul { list-style: none; display: flex; gap: 4px; white-space: nowrap; }
 
         nav ul li a {
             text-decoration: none;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 99px;
             transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
             display: inline-block;
@@ -130,34 +138,12 @@
             animation: shake 0.4s ease-in-out;
         }
 
-        /* --- WIDGET CONTAINER & GRID SYSTEM --- */
+        /* --- MAIN CONTAINER & GRID --- */
         main {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        section {
-            padding: 140px 0 60px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
-        }
-
-        .section-subtitle {
-            color: var(--accent-blue);
-            font-weight: 600;
-            font-size: 0.8rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        p {
-            color: var(--text-muted);
-            line-height: 1.7;
-            font-size: 1rem;
-            margin-bottom: 15px;
+            padding: 0 16px;
         }
 
         /* --- HERO WIDGET SECTION --- */
@@ -166,14 +152,13 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-top: 160px;
-            border-bottom: none;
+            padding: 100px 0 40px 0;
         }
 
         .hero-widget-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            gap: 20px;
+            gap: 16px;
         }
 
         .widget-card {
@@ -181,8 +166,8 @@
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             border: 1px solid var(--card-border);
-            border-radius: 24px;
-            padding: 30px;
+            border-radius: 20px;
+            padding: 24px;
             position: relative;
             overflow: hidden;
             will-change: transform, border-color, box-shadow;
@@ -195,7 +180,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(59, 130, 246, 0.08), transparent 40%);
+            background: radial-gradient(500px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(59, 130, 246, 0.08), transparent 40%);
             opacity: 0;
             transition: opacity 0.3s ease;
             pointer-events: none;
@@ -205,55 +190,68 @@
 
         .widget-card:hover {
             border-color: var(--card-border-hover);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            transform: translateY(-3px);
         }
 
         .hero-main-widget {
-            grid-column: span 8;
+            grid-column: span 7;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .hero-sidebar-widget {
-            grid-column: span 4;
+            grid-column: span 5;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             background: linear-gradient(135deg, rgba(14, 20, 32, 0.85) 0%, rgba(20, 30, 48, 0.4) 100%);
         }
 
-        /* --- ANIMASI TEKS MENGKILAP (SHINE / SHIMMER EFFECT) --- */
+        /* --- ANIMASI TEKS MENGKILAP --- */
         @keyframes shineText {
-            0% {
-                background-position: 200% center;
-            }
-            100% {
-                background-position: -200% center;
-            }
+            0% { background-position: 200% center; }
+            100% { background-position: -200% center; }
         }
 
         .hero-title {
-            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
             font-weight: 800;
             line-height: 1.15;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             background: linear-gradient(90deg, #ffffff 30%, #38bdf8 45%, #ffffff 60%, #38bdf8 75%, #ffffff 90%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: shineText 5s linear infinite;
-            letter-spacing: -1.2px;
+            letter-spacing: -0.8px;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        .section-subtitle {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            display: block;
         }
 
         /* --- SYSTEM MONITOR / TASK MANAGER WIDGET --- */
         .sys-monitor-box {
             background: rgba(4, 7, 12, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            padding: 16px;
-            margin-top: 15px;
+            border-radius: 14px;
+            padding: 14px;
+            margin-top: 12px;
             font-family: monospace;
         }
 
@@ -261,27 +259,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
-        .sys-row span b {
-            color: #34d399;
-        }
+        .sys-row span b { color: #34d399; }
 
         .sys-bar-container {
             width: 100%;
-            height: 6px;
+            height: 5px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 99px;
             overflow: hidden;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
-        .sys-bar-container:last-child {
-            margin-bottom: 0;
-        }
+        .sys-bar-container:last-child { margin-bottom: 0; }
 
         .sys-bar-fill {
             height: 100%;
@@ -294,24 +288,23 @@
         /* --- WIDGET CHIPS / STATS --- */
         .widget-pill-container {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
-            margin-top: 20px;
-            justify-content: center;
+            margin-top: 18px;
         }
 
         .widget-chip {
             background: rgba(15, 23, 42, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.06);
             color: var(--text-main);
-            padding: 8px 16px;
+            padding: 7px 14px;
             border-radius: 99px;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -322,28 +315,28 @@
             transform: translateY(-2px);
         }
 
-        /* --- CLOCK / STATUS WIDGET UTILS --- */
+        /* --- STATUS WIDGET --- */
         .status-pill {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 7px;
             background: rgba(16, 185, 129, 0.1);
             border: 1px solid rgba(16, 185, 129, 0.3);
             color: #34d399;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             width: fit-content;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .status-dot {
-            width: 7px;
-            height: 7px;
+            width: 6px;
+            height: 6px;
             background-color: #34d399;
             border-radius: 50%;
-            box-shadow: 0 0 10px #34d399;
+            box-shadow: 0 0 8px #34d399;
             animation: pulseDot 2s infinite;
         }
 
@@ -353,50 +346,34 @@
             100% { transform: scale(1); opacity: 1; }
         }
 
-        /* --- ANIMASI SCROLL REVEAL --- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            will-change: opacity, transform;
-            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .reveal.active { 
-            opacity: 1; 
-            transform: translateY(0); 
-        }
-
-        /* --- MOBILE RESPONSIVE --- */
-        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 1001; }
-        .menu-toggle span { width: 24px; height: 2px; background-color: #fff; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; }
-
-        @media (max-width: 992px) {
-            header { top: 15px; padding: 0 16px; justify-content: flex-end; }
-            .menu-toggle { display: flex; }
-            nav {
-                position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
-                background: rgba(5, 8, 14, 0.98); backdrop-filter: blur(25px);
-                display: flex; flex-direction: column; justify-content: center; align-items: center;
-                border-radius: 0; border: none;
-                will-change: right;
-                transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        /* --- RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 900px) {
+            header { 
+                top: 12px; 
+                padding: 0 12px; 
             }
-            nav.nav-active { right: 0; }
-            nav ul { flex-direction: column; gap: 20px; text-align: center; }
-            nav ul li a { font-size: 1.3rem; padding: 10px 25px; }
-            .toggle-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-            .toggle-active span:nth-child(2) { opacity: 0; }
-            .toggle-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-            .hero-main-widget, .hero-sidebar-widget { grid-column: span 12; }
-            .hero-title { font-size: 2.4rem; }
-            section { padding: 100px 0 50px 0; }
+            nav {
+                padding: 4px 8px;
+            }
+            nav ul li a {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+            .hero-main-widget, .hero-sidebar-widget { 
+                grid-column: span 12; 
+            }
+            .hero-title { 
+                font-size: 2.1rem; 
+            }
+            #overview {
+                padding-top: 90px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- CANVAS LATAR BELAKANG PCB BERGERAK -->
+    <!-- CANVAS LATAR BELAKANG PCB -->
     <canvas id="lively-canvas"></canvas>
 
     <div class="ambient-glow">
@@ -404,11 +381,8 @@
         <div class="glow-orb orb-2"></div>
     </div>
 
-    <!-- FLOATING MODERN NAVBAR -->
+    <!-- FLOATING MODERN NAVBAR (FIXED CENTER TOP) -->
     <header id="main-header">
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-        </div>
         <nav id="navbar">
             <ul>
                 <li><a href="#overview" class="nav-link active">Beranda</a></li>
@@ -422,7 +396,7 @@
 
     <main>
         <!-- HERO / BERANDA WIDGET -->
-        <section id="overview" class="reveal active">
+        <section id="overview">
             <div class="hero-widget-grid">
                 <!-- Main Widget Profile -->
                 <div class="widget-card hero-main-widget">
@@ -436,18 +410,10 @@
                     </div>
 
                     <div class="widget-pill-container">
-                        <a href="https://www.instagram.com/arlreal_/" target="_blank" rel="noopener noreferrer" class="widget-chip">
-                            Instagram
-                        </a>
-                        <a href="https://www.tiktok.com/@arlreal?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="widget-chip">
-                            TikTok
-                        </a>
-                        <a href="https://www.youtube.com/@arlreal" target="_blank" rel="noopener noreferrer" class="widget-chip">
-                            YouTube
-                        </a>
-                        <a href="https://discord.gg/hMGw3ShbT" target="_blank" rel="noopener noreferrer" class="widget-chip">
-                            Discord
-                        </a>
+                        <a href="https://www.instagram.com/arlreal_/" target="_blank" rel="noopener noreferrer" class="widget-chip">Instagram</a>
+                        <a href="https://www.tiktok.com/@arlreal?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="widget-chip">TikTok</a>
+                        <a href="https://www.youtube.com/@arlreal" target="_blank" rel="noopener noreferrer" class="widget-chip">YouTube</a>
+                        <a href="https://discord.gg/hMGw3ShbT" target="_blank" rel="noopener noreferrer" class="widget-chip">Discord</a>
                     </div>
                 </div>
 
@@ -455,7 +421,7 @@
                 <div class="widget-card hero-sidebar-widget">
                     <div>
                         <span class="section-subtitle">System Monitor</span>
-                        <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Hardware Status</h3>
+                        <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Hardware Status</h3>
                         
                         <!-- Task Manager Widget Style -->
                         <div class="sys-monitor-box">
@@ -475,16 +441,16 @@
                                 <div class="sys-bar-fill" id="ram-bar" style="width: 36%;"></div>
                             </div>
 
-                            <div class="sys-row" style="margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px;">
+                            <div class="sys-row" style="margin-top: 6px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 5px;">
                                 <span>GPU Render</span>
                                 <span style="color: #60a5fa;">Active</span>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: rgba(2, 4, 8, 0.4); padding: 12px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.04); margin-top: 12px;">
-                        <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 2px;">Waktu Lokal</span>
-                        <span style="font-size: 0.9rem; font-weight: 600; color: #fff;" id="live-clock">Serang, Banten</span>
+                    <div style="background: rgba(2, 4, 8, 0.4); padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.04); margin-top: 12px;">
+                        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 2px;">Waktu Lokal</span>
+                        <span style="font-size: 0.85rem; font-weight: 600; color: #fff;" id="live-clock">Serang, Banten</span>
                     </div>
                 </div>
             </div>
@@ -525,7 +491,7 @@
         }
         setInterval(updateSystemMonitor, 2500);
 
-        // --- INTERACTIVE MOUSE SPOTLIGHT ---
+        // --- INTERACTIVE MOUSE SPOTLIGHT (Desktop Only) ---
         document.addEventListener('mousemove', e => {
             const cards = document.querySelectorAll('.widget-card');
             cards.forEach(card => {
@@ -537,7 +503,7 @@
             });
         });
 
-        // --- KANVAS LATAR BELAKANG GARIS-GARIS PCB BERGERAK (LIVE WALLPAPER PCB) ---
+        // --- KANVAS LATAR BELAKANG PCB BERGERAK ---
         const canvas = document.getElementById('lively-canvas');
         const ctx = canvas.getContext('2d');
 
@@ -549,23 +515,20 @@
         resizeCanvas();
 
         let pcbNodes = [];
-        const numNodes = 35;
+        const numNodes = window.innerWidth < 768 ? 18 : 35;
 
-        // Inisialisasi node-node/titik sirkuit PCB
         for (let i = 0; i < numNodes; i++) {
             pcbNodes.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 0.4,
-                vy: (Math.random() - 0.5) * 0.4,
-                radius: Math.random() * 2 + 1,
-                connections: []
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                radius: Math.random() * 2 + 1
             });
         }
 
-        // Partikel sinyal data yang berjalan di jalur PCB
         let signals = [];
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < (window.innerWidth < 768 ? 10 : 20); i++) {
             signals.push({
                 nodeA: Math.floor(Math.random() * pcbNodes.length),
                 nodeB: Math.floor(Math.random() * pcbNodes.length),
@@ -576,7 +539,6 @@
         function drawPCB() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Update posisi node PCB
             pcbNodes.forEach(node => {
                 node.x += node.vx;
                 node.y += node.vy;
@@ -585,7 +547,6 @@
                 if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
             });
 
-            // Gambar garis-garis jalur sirkuit siku-siku (PCB trace style)
             ctx.lineWidth = 1;
             for (let i = 0; i < pcbNodes.length; i++) {
                 for (let j = i + 1; j < pcbNodes.length; j++) {
@@ -593,90 +554,64 @@
                     let dy = Math.abs(pcbNodes[i].y - pcbNodes[j].y);
                     let dist = Math.sqrt(dx * dx + dy * dy);
 
-                    if (dist < 180) {
-                        ctx.strokeStyle = `rgba(59, 130, 246, ${0.15 * (1 - dist / 180)})`;
+                    if (dist < 150) {
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${0.12 * (1 - dist / 150)})`;
                         ctx.beginPath();
-                        // Membuat garis bersiku ala PCB (jalur 90 derajat)
                         ctx.moveTo(pcbNodes[i].x, pcbNodes[i].y);
                         ctx.lineTo(pcbNodes[i].x, pcbNodes[j].y);
                         ctx.lineTo(pcbNodes[j].x, pcbNodes[j].y);
                         ctx.stroke();
-
-                        // Gambar titik node sambungan/konektor di sudut sirkuit
-                        ctx.fillStyle = `rgba(52, 211, 153, ${0.3 * (1 - dist / 180)})`;
-                        ctx.fillRect(pcbNodes[i].x - 1.5, pcbNodes[j].y - 1.5, 3, 3);
                     }
                 }
             }
 
-            // Animasikan titik-titik sinyal cahaya yang berjalan di sepanjang jalur
             signals.forEach(sig => {
                 let nA = pcbNodes[sig.nodeA];
                 let nB = pcbNodes[sig.nodeB];
 
-                sig.progress += 0.008;
+                sig.progress += 0.007;
                 if (sig.progress >= 1) {
                     sig.progress = 0;
                     sig.nodeA = sig.nodeB;
                     sig.nodeB = Math.floor(Math.random() * pcbNodes.length);
                 }
 
-                // Posisi titik di sepanjang jalur siku
                 let currX = sig.progress < 0.5 ? nA.x : nB.x;
                 let currY = sig.progress < 0.5 ? nA.y + (nB.y - nA.y) * (sig.progress * 2) : nA.y + (nB.y - nA.y);
 
                 ctx.fillStyle = '#38bdf8';
                 ctx.beginPath();
-                ctx.arc(currX, currY, 2, 0, Math.PI * 2);
-                ctx.shadowBlur = 8;
-                ctx.shadowColor = '#3b82f6';
+                ctx.arc(currX, currY, 1.8, 0, Math.PI * 2);
                 ctx.fill();
-                ctx.shadowBlur = 0; // Reset shadow
             });
 
             requestAnimationFrame(drawPCB);
         }
         drawPCB();
 
-        // --- MOBILE MENU & SHAKE EFFECT ---
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navElement = document.getElementById('navbar');
+        // --- SHAKE EFFECT FOR UNAVAILABLE LINKS ---
         const navLinks = document.querySelectorAll('.nav-link');
-
-        mobileMenu.addEventListener('click', () => {
-            navElement.classList.toggle('nav-active');
-            mobileMenu.classList.toggle('toggle-active');
-        });
-
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 if (link.classList.contains('nav-unavailable')) {
                     e.preventDefault(); 
                     link.classList.add('shake');
-                    
-                    setTimeout(() => {
-                        link.classList.remove('shake');
-                    }, 400);
+                    setTimeout(() => link.classList.remove('shake'), 400);
                 } else {
-                    navItems.forEach(nav => nav.classList.remove('active'));
+                    navLinks.forEach(nav => nav.classList.remove('active'));
                     link.classList.add('active');
                 }
-
-                navElement.classList.remove('nav-active');
-                mobileMenu.classList.remove('toggle-active');
             });
         });
 
         const header = document.getElementById('main-header');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 0) {
+            if (window.scrollY > 10) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
-
-        const navItems = document.querySelectorAll('nav ul li a');
     </script>
 </body>
 </html>
