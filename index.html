@@ -1,1 +1,682 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldo Rizaldi Limawidjaya — Bio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #07090e;
+            --card-bg: rgba(14, 20, 32, 0.65);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-border-hover: rgba(59, 130, 246, 0.5);
+            --accent-blue: #3b82f6;
+            --accent-blue-hover: #2563eb;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- BACKGROUND CANVAS --- */
+        #lively-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(160px);
+            opacity: 0.35;
+            will-change: transform;
+            animation: floatOrb 25s infinite alternate ease-in-out;
+        }
+
+        .orb-1 { top: -10%; left: 20%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(37,99,235,0.3) 0%, transparent 70%); }
+        .orb-2 { bottom: -20%; right: 10%; width: 55vw; height: 55vw; background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%); animation-delay: -8s; }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(4vw, -5vh) scale(1.08); }
+            100% { transform: translate(-4vw, 4vh) scale(0.92); }
+        }
+
+        /* --- FLOATING MODERN NAVBAR --- */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 24px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 0 24px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        nav {
+            background: rgba(9, 14, 23, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            padding: 8px 14px;
+            border-radius: 99px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            transition: background 0.4s ease, border-color 0.4s ease;
+        }
+
+        header.scrolled nav {
+            background: rgba(5, 8, 14, 0.95);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        nav ul { list-style: none; display: flex; gap: 6px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 99px;
+            transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #fff;
+            background-color: rgba(59, 130, 246, 0.15);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* --- ANIMASI BERGETAR (SHAKE) --- */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-4px); }
+            40% { transform: translateX(4px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+            100% { transform: translateX(0); }
+        }
+
+        .shake {
+            animation: shake 0.4s ease-in-out;
+        }
+
+        /* --- WIDGET CONTAINER & GRID SYSTEM --- */
+        main {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 140px 0 60px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .section-subtitle {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- HERO WIDGET SECTION --- */
+        #overview {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 160px;
+            border-bottom: none;
+        }
+
+        .hero-widget-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
+
+        .widget-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            will-change: transform, border-color, box-shadow;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .widget-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(59, 130, 246, 0.08), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .widget-card:hover::before { opacity: 1; }
+
+        .widget-card:hover {
+            border-color: var(--card-border-hover);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            transform: translateY(-4px);
+        }
+
+        .hero-main-widget {
+            grid-column: span 8;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-sidebar-widget {
+            grid-column: span 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(135deg, rgba(14, 20, 32, 0.85) 0%, rgba(20, 30, 48, 0.4) 100%);
+        }
+
+        /* --- ANIMASI TEKS MENGKILAP (SHINE / SHIMMER EFFECT) --- */
+        @keyframes shineText {
+            0% {
+                background-position: 200% center;
+            }
+            100% {
+                background-position: -200% center;
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, #ffffff 30%, #38bdf8 45%, #ffffff 60%, #38bdf8 75%, #ffffff 90%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shineText 5s linear infinite;
+            letter-spacing: -1.2px;
+        }
+
+        /* --- SYSTEM MONITOR / TASK MANAGER WIDGET --- */
+        .sys-monitor-box {
+            background: rgba(4, 7, 12, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 16px;
+            margin-top: 15px;
+            font-family: monospace;
+        }
+
+        .sys-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .sys-row span b {
+            color: #34d399;
+        }
+
+        .sys-bar-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 99px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .sys-bar-container:last-child {
+            margin-bottom: 0;
+        }
+
+        .sys-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #34d399);
+            width: 40%;
+            transition: width 0.6s ease;
+            border-radius: 99px;
+        }
+
+        /* --- WIDGET CHIPS / STATS --- */
+        .widget-pill-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .widget-chip {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .widget-chip:hover {
+            border-color: var(--accent-blue);
+            background: rgba(30, 41, 59, 0.9);
+            transform: translateY(-2px);
+        }
+
+        /* --- CLOCK / STATUS WIDGET UTILS --- */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            width: fit-content;
+            margin-bottom: 15px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #34d399;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #34d399;
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* --- ANIMASI SCROLL REVEAL --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            will-change: opacity, transform;
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        /* --- MOBILE RESPONSIVE --- */
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 1001; }
+        .menu-toggle span { width: 24px; height: 2px; background-color: #fff; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; }
+
+        @media (max-width: 992px) {
+            header { top: 15px; padding: 0 16px; justify-content: flex-end; }
+            .menu-toggle { display: flex; }
+            nav {
+                position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+                background: rgba(5, 8, 14, 0.98); backdrop-filter: blur(25px);
+                display: flex; flex-direction: column; justify-content: center; align-items: center;
+                border-radius: 0; border: none;
+                will-change: right;
+                transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            nav.nav-active { right: 0; }
+            nav ul { flex-direction: column; gap: 20px; text-align: center; }
+            nav ul li a { font-size: 1.3rem; padding: 10px 25px; }
+            .toggle-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .toggle-active span:nth-child(2) { opacity: 0; }
+            .toggle-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+            .hero-main-widget, .hero-sidebar-widget { grid-column: span 12; }
+            .hero-title { font-size: 2.4rem; }
+            section { padding: 100px 0 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CANVAS LATAR BELAKANG PCB BERGERAK -->
+    <canvas id="lively-canvas"></canvas>
+
+    <div class="ambient-glow">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <!-- FLOATING MODERN NAVBAR -->
+    <header id="main-header">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#overview" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link nav-unavailable">Tentang</a></li>
+                <li><a href="#workflow" class="nav-link nav-unavailable">Alur Kerja</a></li>
+                <li><a href="#skills" class="nav-link nav-unavailable">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link nav-unavailable">Proyek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO / BERANDA WIDGET -->
+        <section id="overview" class="reveal active">
+            <div class="hero-widget-grid">
+                <!-- Main Widget Profile -->
+                <div class="widget-card hero-main-widget">
+                    <div>
+                        <span class="status-pill">
+                            <span class="status-dot"></span> Status Aktif
+                        </span>
+                        <span class="section-subtitle">Bio Digital</span>
+                        <h1 class="hero-title">Aldo Rizaldi Limawidjaya</h1>
+                        <p class="hero-desc">Halo! Selamat datang di bio digital saya. Halaman ini dirancang sebagai ruang interaktif untuk menyambut siapa saja yang mampir dan mengeksplorasi karya serta kreativitas saya.</p>
+                    </div>
+
+                    <div class="widget-pill-container">
+                        <a href="https://www.instagram.com/arlreal_/" target="_blank" rel="noopener noreferrer" class="widget-chip">
+                            Instagram
+                        </a>
+                        <a href="https://www.tiktok.com/@arlreal?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="widget-chip">
+                            TikTok
+                        </a>
+                        <a href="https://www.youtube.com/@arlreal" target="_blank" rel="noopener noreferrer" class="widget-chip">
+                            YouTube
+                        </a>
+                        <a href="https://discord.gg/hMGw3ShbT" target="_blank" rel="noopener noreferrer" class="widget-chip">
+                            Discord
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Status Widget + Task Manager Monitor -->
+                <div class="widget-card hero-sidebar-widget">
+                    <div>
+                        <span class="section-subtitle">System Monitor</span>
+                        <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Hardware Status</h3>
+                        
+                        <!-- Task Manager Widget Style -->
+                        <div class="sys-monitor-box">
+                            <div class="sys-row">
+                                <span>CPU Usage</span>
+                                <span id="cpu-text"><b id="cpu-val">24</b>%</span>
+                            </div>
+                            <div class="sys-bar-container">
+                                <div class="sys-bar-fill" id="cpu-bar" style="width: 24%;"></div>
+                            </div>
+
+                            <div class="sys-row">
+                                <span>RAM Allocated</span>
+                                <span id="ram-text"><b id="ram-val">5.8</b> GB / 16 GB</span>
+                            </div>
+                            <div class="sys-bar-container">
+                                <div class="sys-bar-fill" id="ram-bar" style="width: 36%;"></div>
+                            </div>
+
+                            <div class="sys-row" style="margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 6px;">
+                                <span>GPU Render</span>
+                                <span style="color: #60a5fa;">Active</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(2, 4, 8, 0.4); padding: 12px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.04); margin-top: 12px;">
+                        <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 2px;">Waktu Lokal</span>
+                        <span style="font-size: 0.9rem; font-weight: 600; color: #fff;" id="live-clock">Serang, Banten</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // --- LIVE CLOCK WIDGET ---
+        function updateClock() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const timeString = now.toLocaleTimeString('id-ID', options);
+            const clockEl = document.getElementById('live-clock');
+            if(clockEl) {
+                clockEl.innerHTML = `Serang, Banten • ${timeString} WIB`;
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // --- FAKE SYSTEM MONITOR (CPU/RAM DYNAMIC FLUCTUATION) ---
+        function updateSystemMonitor() {
+            const cpuValEl = document.getElementById('cpu-val');
+            const cpuBarEl = document.getElementById('cpu-bar');
+            const ramValEl = document.getElementById('ram-val');
+            const ramBarEl = document.getElementById('ram-bar');
+
+            if(cpuValEl && cpuBarEl && ramValEl && ramBarEl) {
+                let randomCpu = Math.floor(Math.random() * (55 - 18 + 1)) + 18;
+                cpuValEl.innerText = randomCpu;
+                cpuBarEl.style.width = randomCpu + '%';
+
+                let randomRam = (Math.random() * (7.4 - 5.2) + 5.2).toFixed(1);
+                ramValEl.innerText = randomRam;
+                let ramPercentage = (randomRam / 16) * 100;
+                ramBarEl.style.width = ramPercentage + '%';
+            }
+        }
+        setInterval(updateSystemMonitor, 2500);
+
+        // --- INTERACTIVE MOUSE SPOTLIGHT ---
+        document.addEventListener('mousemove', e => {
+            const cards = document.querySelectorAll('.widget-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // --- KANVAS LATAR BELAKANG GARIS-GARIS PCB BERGERAK (LIVE WALLPAPER PCB) ---
+        const canvas = document.getElementById('lively-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        let pcbNodes = [];
+        const numNodes = 35;
+
+        // Inisialisasi node-node/titik sirkuit PCB
+        for (let i = 0; i < numNodes; i++) {
+            pcbNodes.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                radius: Math.random() * 2 + 1,
+                connections: []
+            });
+        }
+
+        // Partikel sinyal data yang berjalan di jalur PCB
+        let signals = [];
+        for (let i = 0; i < 20; i++) {
+            signals.push({
+                nodeA: Math.floor(Math.random() * pcbNodes.length),
+                nodeB: Math.floor(Math.random() * pcbNodes.length),
+                progress: Math.random()
+            });
+        }
+
+        function drawPCB() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Update posisi node PCB
+            pcbNodes.forEach(node => {
+                node.x += node.vx;
+                node.y += node.vy;
+
+                if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+                if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+            });
+
+            // Gambar garis-garis jalur sirkuit siku-siku (PCB trace style)
+            ctx.lineWidth = 1;
+            for (let i = 0; i < pcbNodes.length; i++) {
+                for (let j = i + 1; j < pcbNodes.length; j++) {
+                    let dx = Math.abs(pcbNodes[i].x - pcbNodes[j].x);
+                    let dy = Math.abs(pcbNodes[i].y - pcbNodes[j].y);
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 180) {
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${0.15 * (1 - dist / 180)})`;
+                        ctx.beginPath();
+                        // Membuat garis bersiku ala PCB (jalur 90 derajat)
+                        ctx.moveTo(pcbNodes[i].x, pcbNodes[i].y);
+                        ctx.lineTo(pcbNodes[i].x, pcbNodes[j].y);
+                        ctx.lineTo(pcbNodes[j].x, pcbNodes[j].y);
+                        ctx.stroke();
+
+                        // Gambar titik node sambungan/konektor di sudut sirkuit
+                        ctx.fillStyle = `rgba(52, 211, 153, ${0.3 * (1 - dist / 180)})`;
+                        ctx.fillRect(pcbNodes[i].x - 1.5, pcbNodes[j].y - 1.5, 3, 3);
+                    }
+                }
+            }
+
+            // Animasikan titik-titik sinyal cahaya yang berjalan di sepanjang jalur
+            signals.forEach(sig => {
+                let nA = pcbNodes[sig.nodeA];
+                let nB = pcbNodes[sig.nodeB];
+
+                sig.progress += 0.008;
+                if (sig.progress >= 1) {
+                    sig.progress = 0;
+                    sig.nodeA = sig.nodeB;
+                    sig.nodeB = Math.floor(Math.random() * pcbNodes.length);
+                }
+
+                // Posisi titik di sepanjang jalur siku
+                let currX = sig.progress < 0.5 ? nA.x : nB.x;
+                let currY = sig.progress < 0.5 ? nA.y + (nB.y - nA.y) * (sig.progress * 2) : nA.y + (nB.y - nA.y);
+
+                ctx.fillStyle = '#38bdf8';
+                ctx.beginPath();
+                ctx.arc(currX, currY, 2, 0, Math.PI * 2);
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = '#3b82f6';
+                ctx.fill();
+                ctx.shadowBlur = 0; // Reset shadow
+            });
+
+            requestAnimationFrame(drawPCB);
+        }
+        drawPCB();
+
+        // --- MOBILE MENU & SHAKE EFFECT ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navElement = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        mobileMenu.addEventListener('click', () => {
+            navElement.classList.toggle('nav-active');
+            mobileMenu.classList.toggle('toggle-active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.classList.contains('nav-unavailable')) {
+                    e.preventDefault(); 
+                    link.classList.add('shake');
+                    
+                    setTimeout(() => {
+                        link.classList.remove('shake');
+                    }, 400);
+                } else {
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    link.classList.add('active');
+                }
+
+                navElement.classList.remove('nav-active');
+                mobileMenu.classList.remove('toggle-active');
+            });
+        });
+
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const navItems = document.querySelectorAll('nav ul li a');
+    </script>
+</body>
+</html>
