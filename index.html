@@ -71,7 +71,7 @@
             100% { transform: translate(-4vw, 4vh) scale(0.92); }
         }
 
-        /* --- FLOATING MODERN NAVBAR --- */
+        /* --- FLOATING MODERN NAVBAR DENGAN OUTLINE CAHAYA JELAS & MENYALA --- */
         header {
             width: 100%;
             position: fixed;
@@ -85,19 +85,43 @@
             pointer-events: none;
         }
 
+        /* Container pembungkus dengan ketebalan border luar lebih tegas */
+        .nav-glow-wrapper {
+            position: relative;
+            padding: 2.5px; /* Mempertegas ketebalan garis outline */
+            border-radius: 99px;
+            overflow: hidden;
+            pointer-events: auto;
+            /* Efek glow bayangan luar yang terang agar outline terlihat jelas */
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.35), inset 0 0 15px rgba(59, 130, 246, 0.2);
+        }
+
+        /* Animasi rotasi cahaya border yang lebih kontras & terang */
+        .nav-glow-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: -60%;
+            background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 200deg, rgba(56, 189, 248, 0.9) 280deg, #38bdf8 320deg, #ffffff 360deg);
+            animation: rotateGlow 3s linear infinite;
+        }
+
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         nav {
-            background: rgba(9, 14, 23, 0.85);
+            position: relative;
+            background: rgba(9, 14, 23, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--card-border);
             padding: 8px 14px;
             border-radius: 99px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            transition: background 0.4s ease, border-color 0.4s ease;
-            pointer-events: auto;
+            transition: background 0.4s ease;
             max-width: 100%;
             overflow-x: auto;
             scrollbar-width: none;
+            z-index: 1;
         }
 
         nav::-webkit-scrollbar {
@@ -105,8 +129,7 @@
         }
 
         header.scrolled nav {
-            background: rgba(5, 8, 14, 0.95);
-            border-color: rgba(255, 255, 255, 0.12);
+            background: rgba(5, 8, 14, 0.98);
         }
 
         nav ul { list-style: none; display: flex; gap: 6px; white-space: nowrap; }
@@ -439,7 +462,6 @@
                 padding: 70px 0 40px 0;
             }
 
-            /* Mengubah grid hero menjadi satu kolom penuh di HP */
             .hero-widget-grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
@@ -495,17 +517,19 @@
         <div class="glow-orb orb-2"></div>
     </div>
 
-    <!-- FLOATING MODERN NAVBAR -->
+    <!-- FLOATING MODERN NAVBAR DENGAN OUTLINE CAHAYA JELAS -->
     <header id="main-header">
-        <nav id="navbar">
-            <ul>
-                <li><a href="#bio" class="nav-link active">Beranda</a></li>
-                <li><a href="#about" class="nav-link">Tentang Saya</a></li>
-                <li><a href="#skills" class="nav-link">Keahlian</a></li>
-                <li><a href="#projects" class="nav-link nav-unavailable">Portofolio</a></li>
-                <li><a href="#contact" class="nav-link">Kontak</a></li>
-            </ul>
-        </nav>
+        <div class="nav-glow-wrapper">
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#bio" class="nav-link active">Beranda</a></li>
+                    <li><a href="#about" class="nav-link">Tentang Saya</a></li>
+                    <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                    <li><a href="#projects" class="nav-link nav-unavailable">Portofolio</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
