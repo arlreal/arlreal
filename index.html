@@ -71,7 +71,7 @@
             100% { transform: translate(-4vw, 4vh) scale(0.92); }
         }
 
-        /* --- FLOATING MODERN NAVBAR (FIXED CENTER TOP) --- */
+        /* --- FLOATING MODERN NAVBAR --- */
         header {
             width: 100%;
             position: fixed;
@@ -81,7 +81,7 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            padding: 0 24px;
+            padding: 0 20px;
             pointer-events: none;
         }
 
@@ -391,6 +391,7 @@
             align-items: center;
             gap: 8px;
             background: rgba(16, 185, 129, 0.1);
+            border: 1px card-border solid rgba(16, 185, 129, 0.3);
             border: 1px solid rgba(16, 185, 129, 0.3);
             color: #34d399;
             padding: 6px 14px;
@@ -416,12 +417,73 @@
             100% { transform: scale(1); opacity: 1; }
         }
 
-        /* --- MOBILE RESPONSIVE --- */
+        /* ==========================================================
+           RESPONSIF KHUSUS LAYAR HP (MOBILE DEVICES: max-width: 992px)
+           ================================================---------- */
         @media (max-width: 992px) {
-            header { top: 15px; padding: 0 16px; }
-            .hero-main-widget, .hero-sidebar-widget { grid-column: span 12; }
-            .hero-title { font-size: 2.4rem; }
-            section { min-height: auto; padding: 100px 0; }
+            header {
+                top: 12px;
+                padding: 0 12px;
+            }
+
+            nav ul li a {
+                font-size: 0.78rem;
+                padding: 6px 12px;
+            }
+
+            main {
+                padding: 0 16px;
+            }
+
+            section {
+                min-height: auto;
+                padding: 70px 0 40px 0;
+            }
+
+            /* Mengubah grid hero menjadi satu kolom penuh di HP */
+            .hero-widget-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .hero-main-widget, 
+            .hero-sidebar-widget {
+                grid-column: span 1;
+            }
+
+            .widget-card {
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .hero-title {
+                font-size: 1.9rem;
+                letter-spacing: -0.5px;
+            }
+
+            .section-title {
+                font-size: 1.5rem !important;
+            }
+
+            p, .hero-desc {
+                font-size: 0.92rem;
+            }
+
+            /* Penyesuaian tombol chip agar pas di layar kecil HP */
+            .widget-pill-container {
+                gap: 8px;
+                margin-top: 15px;
+            }
+
+            .widget-chip {
+                font-size: 0.78rem;
+                padding: 6px 12px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
         }
     </style>
 </head>
@@ -435,7 +497,7 @@
         <div class="glow-orb orb-2"></div>
     </div>
 
-    <!-- FLOATING MODERN NAVBAR (FIXED CENTER TOP) -->
+    <!-- FLOATING MODERN NAVBAR -->
     <header id="main-header">
         <nav id="navbar">
             <ul>
@@ -717,7 +779,7 @@
                 let currY = sig.progress < 0.5 ? nA.y + (nB.y - nA.y) * (sig.progress * 2) : nA.y + (nB.y - nA.y);
 
                 ctx.fillStyle = '#38bdf8';
-                    ctx.beginPath();
+                ctx.beginPath();
                 ctx.arc(currX, currY, 2, 0, Math.PI * 2);
                 ctx.shadowBlur = 8;
                 ctx.shadowColor = '#3b82f6';
@@ -729,7 +791,7 @@
         }
         drawPCB();
 
-        // --- CARD REVEAL ON SCROLL (MUNCUL & HILANG BERULANG SAAT DISCROLL NAIK/TURUN) ---
+        // --- CARD REVEAL ON SCROLL ---
         const revealElements = document.querySelectorAll('.reveal-card');
 
         const revealObserver = new IntersectionObserver((entries) => {
@@ -760,7 +822,6 @@
             });
         });
 
-        // ScrollSpy dengan deteksi cepat dan responsif
         window.addEventListener('scroll', () => {
             let scrollY = window.pageYOffset;
             let windowHeight = window.innerHeight;
@@ -787,7 +848,6 @@
                 });
             }
 
-            // Header Background Effect on Scroll
             const header = document.getElementById('main-header');
             if (window.scrollY > 0) {
                 header.classList.add('scrolled');
