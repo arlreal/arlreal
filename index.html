@@ -195,14 +195,14 @@
         }
 
         .hero-main-widget {
-            grid-column: span 7;
+            grid-column: span 8; /* Dikembalikan proporsional ke 8 kolom */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .hero-sidebar-widget {
-            grid-column: span 5;
+            grid-column: span 4; /* Dikembalikan proporsional ke 4 kolom */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -291,7 +291,7 @@
             gap: 8px;
             flex-wrap: wrap;
             margin-top: 18px;
-            justify-content: center; /* Diatur ke tengah kembali */
+            justify-content: center;
         }
 
         .widget-chip {
@@ -361,7 +361,7 @@
                 padding: 6px 12px;
             }
             .hero-main-widget, .hero-sidebar-widget { 
-                grid-column: span 12; 
+                grid-column: span 12; /* Di layar HP otomatis menumpuk jadi 1 kolom penuh yang rapi */
             }
             .hero-title { 
                 font-size: 2.1rem; 
