@@ -17,12 +17,16 @@
             --text-muted: #94a3b8;
         }
 
+        /* --- SMOOTH SCROLL GLOBAL --- */
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -114,14 +118,18 @@
             font-weight: 600;
             padding: 8px 18px;
             border-radius: 99px;
-            transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            transition: color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
             display: inline-block;
         }
 
-        nav ul li a:hover, nav ul li a.active {
+        nav ul li a:hover {
+            transform: translateY(-1px);
+        }
+
+        nav ul li a.active {
             color: #fff;
-            background-color: rgba(59, 130, 246, 0.15);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            background-color: rgba(59, 130, 246, 0.2);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
         }
 
         /* --- ANIMASI BERGETAR (SHAKE) --- */
@@ -138,17 +146,33 @@
             animation: shake 0.4s ease-in-out;
         }
 
-        /* --- WIDGET CONTAINER & GRID SYSTEM --- */
+        /* --- WIDGET CONTAINER & SECTION SPACING --- */
         main {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px 200px 24px; /* Tambahan padding-bottom agar section kontak bisa naik ke atas */
+            padding: 0 24px;
         }
 
         section {
-            padding: 140px 0 60px 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        /* Kelas animasi masuk & keluar berulang setiap discroll */
+        .reveal-card {
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-card.active-reveal {
+            opacity: 1;
+            transform: translateY(0) scale(1);
         }
 
         .section-subtitle {
@@ -170,11 +194,6 @@
 
         /* --- HERO WIDGET SECTION --- */
         #bio {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-top: 160px;
             border-bottom: none;
         }
 
@@ -182,6 +201,7 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 20px;
+            width: 100%;
         }
 
         .widget-card {
@@ -275,9 +295,19 @@
             background: linear-gradient(90deg, #ffffff 30%, #38bdf8 45%, #ffffff 60%, #38bdf8 75%, #ffffff 90%);
             background-size: 200% auto;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: shineText 5s linear infinite;
             letter-spacing: -1.2px;
+        }
+
+        .section-title {
+            background: linear-gradient(90deg, #ffffff 30%, #38bdf8 45%, #ffffff 60%, #38bdf8 75%, #ffffff 90%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shineText 5s linear infinite;
         }
 
         /* --- SYSTEM MONITOR / TASK MANAGER WIDGET --- */
@@ -391,7 +421,7 @@
             header { top: 15px; padding: 0 16px; }
             .hero-main-widget, .hero-sidebar-widget { grid-column: span 12; }
             .hero-title { font-size: 2.4rem; }
-            section { padding: 100px 0 50px 0; }
+            section { min-height: auto; padding: 100px 0; }
         }
     </style>
 </head>
@@ -423,7 +453,7 @@
         <section id="bio">
             <div class="hero-widget-grid">
                 <!-- Main Widget Profile -->
-                <div class="widget-card hero-main-widget">
+                <div class="widget-card hero-main-widget reveal-card">
                     <div>
                         <span class="status-pill">
                             <span class="status-dot"></span> Status Aktif
@@ -450,7 +480,7 @@
                 </div>
 
                 <!-- Sidebar Status Widget + Task Manager Monitor -->
-                <div class="widget-card hero-sidebar-widget">
+                <div class="widget-card hero-sidebar-widget reveal-card">
                     <div>
                         <span class="section-subtitle">System Monitor</span>
                         <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 4px;">Hardware Status</h3>
@@ -490,9 +520,9 @@
 
         <!-- SECTION TENTANG SAYA -->
         <section id="about">
-            <div class="widget-card" style="padding: 40px;">
+            <div class="widget-card reveal-card" style="padding: 40px; width: 100%;">
                 <span class="section-subtitle">Mengenal Lebih Dekat</span>
-                <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 20px;">Tentang Saya</h2>
+                <h2 class="section-title" style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">Tentang Saya</h2>
                 <p style="font-size: 1.05rem; line-height: 1.8;">
                     Halo, saya Aldo Rizaldi Limawidjaya. Saya adalah seorang mahasiswa yang memiliki ketertarikan mendalam pada dunia teknologi, pemrograman, dan perangkat keras. Perjalanan saya di dunia digital dibentuk melalui materi perkuliahan yang saya pelajari—seperti sistem tertanam dan perakitan perangkat elektronik—serta didukung oleh eksplorasi mandiri di luar kelas, seperti mendalami desain 3D menggunakan Blender. Bagi saya, portofolio ini adalah ruang interaktif untuk mendokumentasikan setiap proses belajar dan karya yang saya bangun.
                 </p>
@@ -501,9 +531,9 @@
 
         <!-- SECTION KEAHLIAN -->
         <section id="skills">
-            <div class="widget-card" style="padding: 40px;">
+            <div class="widget-card reveal-card" style="padding: 40px; width: 100%;">
                 <span class="section-subtitle">Spesifikasi & Kemampuan</span>
-                <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 10px;">Keahlian & Teknologi</h2>
+                <h2 class="section-title" style="font-size: 2rem; font-weight: 800; margin-bottom: 10px;">Keahlian & Teknologi</h2>
                 <p>Berikut adalah beberapa bidang teknologi, bahasa pemrograman, dan <em>tools</em> yang saya kuasai melalui perkuliahan maupun eksplorasi mandiri:</p>
                 
                 <div class="skills-grid">
@@ -536,10 +566,10 @@
         </section>
 
         <!-- SECTION KONTAK -->
-        <section id="contact" style="padding-bottom: 100px;">
-            <div class="widget-card" style="text-align: center; padding: 40px;">
+        <section id="contact" style="min-height: auto; padding: 100px 0;">
+            <div class="widget-card reveal-card" style="text-align: center; padding: 40px; width: 100%;">
                 <span class="section-subtitle">Hubungi Kami</span>
-                <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 12px;">Saluran & Kontak Resmi</h2>
+                <h2 class="section-title" style="font-size: 2rem; font-weight: 800; margin-bottom: 12px;">Saluran & Kontak Resmi</h2>
                 <p style="max-width: 600px; margin: 0 auto 25px auto;">Tertarik untuk terhubung, berkolaborasi, atau bergabung ke komunitas? Silakan akses tautan platform di bawah ini:</p>
                 
                 <div class="widget-pill-container" style="justify-content: center;">
@@ -687,7 +717,7 @@
                 let currY = sig.progress < 0.5 ? nA.y + (nB.y - nA.y) * (sig.progress * 2) : nA.y + (nB.y - nA.y);
 
                 ctx.fillStyle = '#38bdf8';
-                ctx.beginPath();
+                    ctx.beginPath();
                 ctx.arc(currX, currY, 2, 0, Math.PI * 2);
                 ctx.shadowBlur = 8;
                 ctx.shadowColor = '#3b82f6';
@@ -698,6 +728,23 @@
             requestAnimationFrame(drawPCB);
         }
         drawPCB();
+
+        // --- CARD REVEAL ON SCROLL (MUNCUL & HILANG BERULANG SAAT DISCROLL NAIK/TURUN) ---
+        const revealElements = document.querySelectorAll('.reveal-card');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active-reveal');
+                } else {
+                    entry.target.classList.remove('active-reveal');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
 
         // --- NAVIGATION & SCROLLSPY FIX ---
         const navLinks = document.querySelectorAll('.nav-link');
@@ -713,19 +760,17 @@
             });
         });
 
-        // ScrollSpy untuk mendeteksi section aktif saat discroll
+        // ScrollSpy dengan deteksi cepat dan responsif
         window.addEventListener('scroll', () => {
             let scrollY = window.pageYOffset;
             let windowHeight = window.innerHeight;
             let documentHeight = document.documentElement.scrollHeight;
 
-            // Jika scroll sudah mentok di paling bawah halaman
             if ((scrollY + windowHeight) >= documentHeight - 15) {
                 navLinks.forEach(link => link.classList.remove('active'));
                 const contactLink = document.querySelector('a[href="#contact"]');
                 if (contactLink) contactLink.classList.add('active');
             } else {
-                // Logika deteksi section normal
                 sections.forEach(section => {
                     const sectionHeight = section.offsetHeight;
                     const sectionTop = section.offsetTop - 150;
